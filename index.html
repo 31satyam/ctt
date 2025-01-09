@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCorp Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets\logo.png" alt="TechCorp Logo">
+                <span>Code Triggered</span>
+            </div>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Slider -->
+    <section id="home" class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="assets\home.png" alt="Company Building">
+                <div class="slide-content">
+                    <h1></h1>
+                    <p></p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015" alt="Web Development">
+                <div class="slide-content">
+                    <h2>Web Development</h2>
+                    <p>Building modern, responsive websites tailored to drive your business success.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072" alt="Cloud Services">
+                <div class="slide-content">
+                    <h2>AI/ML</h2>
+                    <p>Empowering businesses with intelligent AI/ML solutions for smarter decision-making</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015" alt="Web Development">
+                <div class="slide-content">
+                    <h2>Dashboard / bussiness management System</h2>
+                    <p>Streamlining operations with intuitive dashboards and efficient business management solutions</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2070" alt="Digital Marketing">
+                <div class="slide-content">
+                    <h2>Mobile Apps Development</h2>
+                    <p>Creating innovative and user-friendly mobile apps to elevate your business on the go</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev">❮</button>
+        <button class="slider-btn next">❯</button>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>We design and develop websites tailored to  your unique business requirements using the latest technologies like MERN, PHP Laravel, Python, and WordPress. From sleek, responsive designs.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&q=80&w=2070" alt="Mobile Apps">
+                <h3>Mobile Apps</h3>
+                <p>We develop user-friendly mobile applications that cater to your specific business needs, ensuring seamless functionality and an engaging user experience across all devicess</p>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072" alt="Cloud Solutions">
+                <h3>AI/ML</h3>
+                <p>Our AI/ML-powered chatbots provide seamless, 24/7 customer support, handling queries, resolving issues, and guiding users with human-like efficiency and accuracy.</p>
+            </div>
+            <!-- <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015" alt="Digital Marketing">
+                <h3>Digital Marketing</h3>
+                <p>SEO, social media, and content marketing</p>
+            </div> -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2070" alt="Consulting">
+                <h3>Dashboard/Management System</h3>
+                <p>Our dashboards are designed to streamline your operations, providing you with all the tools you need to track, analyze, and manage your business efficiently—all in one place.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Code Triggered</h2>
+                <p>At Code Triggered, we are a passionate and ambitious startup
+                    dedicated to delivering innovative technology solutions that
+                    empower businesses. Although we are new to the industry, our
+                    commitment to learning, creativity, and excellence drives us to
+                    provide high-quality services that cater to your unique needs. Our
+                    goal is to bridge the gap between technology and business growth
+                    by offering a range of services, including website development,
+                    mobile app creation, AI-powered chatbots, and intuitive
+                    dashboards. With a focus on user-centric design and efficiency, we
+                    aim to help our clients stay ahead in an ever-evolving digital
+                    world.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets\photo.png" alt="Our Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <!-- <div class="info-item">
+                    <img src="https://api.iconify.design/lucide:map-pin.svg" alt="Location">
+                    <p>123 Tech Street, Silicon Valley, CA 94025</p>
+                </div> -->
+                <div class="info-item">
+                    <img src="https://api.iconify.design/lucide:phone.svg" alt="Phone">
+                    <p>+91 9773877402, +91 8802102728</p>
+                </div>
+                <div class="info-item">
+                    <img src="https://api.iconify.design/lucide:mail.svg" alt="Email">
+                    <p>codetriggered@gmail.com</p>
+                </div>
+            </div>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br>
+                <button type="button" id="submitBtn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 codetriggered technologies. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
