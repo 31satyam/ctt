@@ -32,17 +32,18 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Ensures proper stacking */
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .logo img {
-    width: 32px;
-    height: 32px;
+    width: 64px; /* Increased width */
+    height: 64px; /* Increased height */
 }
 
 .logo span {
@@ -68,9 +69,62 @@ nav a:hover {
     color: #2563eb;
 }
 
+/* Mobile Menu */
+.mobile-menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #2563eb;
+    z-index: 1100; /* Ensures it's above other elements */
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures visibility over other elements */
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.mobile-menu a:hover {
+    background: #f3f4f6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the desktop menu */
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Show hamburger icon */
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+}
+
+
+
 /* Slider */
 .slider {
-    height: 100vh;
+    height: 100vh; /* Full height for larger screens */
     position: relative;
     overflow: hidden;
     margin-top: 64px;
@@ -90,7 +144,11 @@ nav a:hover {
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures images cover the container */
+    position: absolute; /* Keeps the image as a background layer */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Positions the image behind the content */
 }
 
 .slide-content {
@@ -100,37 +158,36 @@ nav a:hover {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    z-index: 2; /* Ensures the content is above the image */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.slide-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.slide-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.slide-content p {
-    font-size: 1.5rem;
-}
-
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
     padding: 1rem;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
+    width: 90%; /* Prevents text from overflowing on smaller screens */
 }
 
-.prev { left: 1rem; }
-.next { right: 1rem; }
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .slider {
+        height: 70vh; /* Adjust slider height for smaller screens */
+    }
+
+    .slide-content h1 {
+        font-size: 1.5rem; /* Smaller text for mobile screens */
+    }
+
+    .slide-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .slide img {
+        height: 70vh; /* Ensures the image height matches the slider height */
+        object-fit: cover;
+    }
+}
+
 
 /* Services */
 .services {
