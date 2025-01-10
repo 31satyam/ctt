@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.init();
 });
 
+
 // Initialize EmailJS
 (function () {
     emailjs.init("D0htYagxQScGDLP_N"); // Your EmailJS public key
